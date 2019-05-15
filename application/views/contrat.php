@@ -63,7 +63,7 @@
 						</div>
 						<h5 class="text-center pix-purple"><span class="pix_edit_text"><strong>Obtenez votre pack platinum</strong></span></h5>
 						<h2 class="pix-black-gray-dark text-center pix-no-margin-top secondary-font">
-							<span class="pix_edit_text"><strong>Augmentés vos possibilitez !</strong></span>
+							<span class="pix_edit_text"><strong>Augmentez vos possibilités !</strong></span>
 						</h2>
 						<h5 class="pix-black-gray-light text-center pix-margin-bottom-30">
 							<span class="pix_edit_text">Mettez-vous à jour grâce au pack Platinum et bénéficiez de toute notre gamme de produits dés au aujourd'hui</span>
