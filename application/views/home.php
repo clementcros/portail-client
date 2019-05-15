@@ -100,8 +100,8 @@
 								<div class="container">
 									<div class="about_con_box">
 										<h3 class="text-center">Le saviez vous</h3>
-										<p>Vous pouvez exporter vos statistique depuis le back-office WEBCAMP de vos
-											dernières réservation pour en savoir plus cliquer ici</p>
+										<p>Vous pouvez exporter vos statistiques depuis le back-office WEBCAMP de vos
+											dernières réservations pour en savoir plus cliquer ici</p>
 									</div>
 								</div>
 							</div>
@@ -210,7 +210,7 @@
 					</div>
 				</div>
 				<br>
-				<h4>Les dernières mise a jours de nos produits :</h4>
+				<h4>Les dernières mise a jour de nos produits :</h4>
 				<div class="row">
 					<div class="col-md-12 border" style="height: 450px; overflow: auto;">
 						<div class="col-12">
@@ -456,7 +456,7 @@
 				<div class="modal-footer">
 					<button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
 					<button type="button" ng-click="validate()" class="btn btn-primary" data-dismiss="modal">Valider ma
-						DSM
+						DMS
 					</button>
 				</div>
 			</div>
