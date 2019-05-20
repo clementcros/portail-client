@@ -13,7 +13,7 @@ class ContratsController extends CI_Controller
 
 	public function index()
 	{
-
+		$this->load->view('partial/header');
 		$this->load->view('contrat');
 
 	}

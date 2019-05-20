@@ -1,53 +1,59 @@
-<!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<html lang="en">
+<script id="tinyhippos-injected">if (window.top.ripple) {
+		window.top.ripple("bootstrap").inject(window, document);
+	}</script>
 <head>
-	<title>Sequoiasoft - portail client</title>
-	<!-- Meta -->
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<link rel="shortcut icon" href="<?php echo base_url()?>favicon.ico">
+	<title>CustomerPortal</title>
+	<base href="/">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/hammerjs/2.0.8/hammer.min.js"></script>
+	<link id="theme-style" rel="stylesheet" href="<?php echo base_url() ?>assets/css/home.css">
+	<link id="theme-style" rel="stylesheet" href="<?php echo base_url() ?>assets/css/contrats.css">
+	<script src="<?php echo base_url() ?>node_modules/angular/angular.js"></script>
+	<script src="<?php echo base_url() ?>node_modules/angular-sanitize/angular-sanitize.js"></script>
+	<script src="<?php echo base_url() ?>assets/js/app.js"></script>
+	<script src="<?php echo base_url() ?>assets/js/NavCtrl.js"></script>
+	<script src="<?php echo base_url() ?>assets/js/SupportCtrl.js"></script>
+	<script src="<?php echo base_url() ?>assets/js/HomeCtrl.js"></script>
+	<script src="<?php echo base_url() ?>assets/js/LoginFactory.js"></script>
+	<script src="<?php echo base_url() ?>assets/js/ChangelogFactory.js"></script>
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+		  integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
 
-	<!-- Start load module angularjs	-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script
-		src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
-		integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
-		crossorigin="anonymous"></script>
-	<script src="<?php echo base_url()?>node_modules/angular/angular.js"></script>
-	<script src="<?php echo base_url()?>node_modules/angular-sanitize/angular-sanitize.js"></script>
-	<script src="<?php echo base_url()?>assets/js/app.js"></script>
-	<script src="<?php echo base_url()?>assets/js/LoginCtrl.js"></script>
-	<script src="<?php echo base_url()?>assets/js/LoginFactory.js"></script>
+	<!------ Include the above in your HEAD tag ---------->
 
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body ng-app="portailClient">
+<div ng-controller="HomeCtrl">
+	<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3 color">
+		<div class="container" ng-controller="NavCtrl">
 
-	<!-- End load module angularjs	-->
-	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="<?php echo base_url()?>assets/plugins/bootstrap/css/bootstrap.min.css">
-	<!-- Global CSS -->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
-
-	<!-- Theme CSS -->
-	<link id="theme-style" rel="stylesheet" href="<?php echo base_url()?>assets/css/login.css">
-<!--	<link id="theme-style" rel="stylesheet" href="--><?php //echo base_url()?><!--assets/css/introjs.css">-->
-<!--	<link id="theme-style" rel="stylesheet" href="--><?php //echo base_url()?><!--assets/css/navbar.css">-->
-	<!-- Our CSS  -->
-<!--	<link rel="stylesheet" href="--><?php //echo base_url()?><!--assets/css/changelog.css">-->
-
-	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	<!--[if lt IE 9]>
-	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
-</head>
-
-<body class="landing-page" ng-app="portailClient">
-
-
-
+			<button class="navbar-toggler navbar-toggler-right mx-auto" type="button" data-toggle="collapse"
+					data-target="#navbar2SupportedContent" aria-controls="navbar2SupportedContent" aria-expanded="false"
+					aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+			<div class="collapse navbar-collapse text-center justify-content-between" id="navbar2SupportedContent">
+				<a class="p-2 text-secondary" href="#"><i class="fas fa-headset fa-1x"></i></a>
+				<a class="p-2 text-secondary" ng-click="nav('home')">Accueil</a>
+				<a class="p-2 text-secondary" ng-click="nav('actus')">Actualités</a>
+				<a class="p-2 text-secondary" ng-click="nav('contrats')">Mes contrats</a>
+				<a class="p-2 text-secondary" ng-click="nav('entreprise')">Enterprise</a>
+				<a class="p-2 text-secondary" href="#">Support</a>
+				<a class="p-2 text-secondary" ng-click="logout()">
+					<button ng-click="logout()" type="button" class="btn btn-warning">Deconnexion</button>
+				</a>
+			</div>
+			<div ng-controller="SupportCtrl">
+				<button data-toggle="modal" data-target="#exampleModal" type="button" class="btn btn-info">Ouvrir un
+					incident
+				</button>
+			</div>
+		</div>
+	</nav>
