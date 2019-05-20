@@ -10,7 +10,7 @@
 		<main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 bd-content">
 		<div class="row">
 			<div class="col-md-4" ng-repeat="news in actus">
-				<div class="card mb-4 border-dark">
+				<div class="card mb-4 border-dark card-height">
 					<img class="card-img-top" src="<?php echo base_url() ?>assets/uploads/files/{{news.img}}" alt="Card image cap">
 					<div class="card-body">
 						<h5 class="card-title">{{news.title}}</h5>

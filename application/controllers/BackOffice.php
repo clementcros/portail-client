@@ -37,7 +37,6 @@ class BackOffice extends CI_Controller {
 			$crud->set_theme('datatables');
 			$crud->set_table('actus');
 			$crud->set_subject('articles');
-//			$crud->required_fields('city');
 			$crud->columns('title','article','author','img','publication');
 			$crud->set_field_upload('img','assets/uploads/files');
 			$output = $crud->render();
@@ -53,7 +52,7 @@ class BackOffice extends CI_Controller {
 	{
 			$crud = new grocery_CRUD();
 
-			$crud->set_theme('datatables');
+			$crud->set_theme('flexigrid');
 			$crud->set_table('employees');
 			$crud->set_relation('officeCode','offices','city');
 			$crud->display_as('officeCode','Office City');

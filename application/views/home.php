@@ -245,33 +245,30 @@
 				</div>
 
 			</div>
-			<div class="col-md-4" style="">
+			<div class="col-md-4" style="" >
 				<div class="col mx-2 pt-5 px-5 mb-3 border">
 					<h4>Actualités</h4>
 					<div class="card">
 						<img class="card-img-top"
-							 src="https://cdn.dribbble.com/users/230193/screenshots/2529347/googlecalendar-camping.jpg"
+							 src="<?php echo base_url() ?>assets/uploads/files/{{actusHome[0].img}}"
 							 alt="Card image cap">
 						<div class="card-body">
-							<p class="card-text">Le module CRM d'eSeason qui permet de simplifier et optimiser votre
-								communication ...<a
-									href="#" class="">Voir plus</a></p>
+							<p class="card-text">{{actusHome[0].extrait | limitTo: 100 }}{{actusHome[0].extrait.length > 100 ? '...' : ''}}
+								<a class="cursor" ng-click="readMore(actusHome[0].id)">Voir plus</a></p>
 						</div>
 					</div>
-					an
+
 					<div class="card">
 						<img class="card-img-top"
-							 src="https://cdn.dribbble.com/users/230193/screenshots/2529347/googlecalendar-camping.jpg"
+							 src="<?php echo base_url() ?>assets/uploads/files/{{actusHome[1].img}}"
 							 alt="Card image cap">
 						<div class="card-body">
-							<h4>test</h4>
-							<p class="card-text">Le module CRM d'eSeason qui permet de simplifier et optimiser votre
-								communication ...<a
-									href="#" class="">Voir plus</a></p>
+							<p class="card-text">{{actusHome[1].extrait | limitTo: 100 }}{{actusHome[1].extrait.length > 100 ? '...' : ''}}
+								<a class="cursor" ng-click="readMore(actusHome[1].id)">Voir plus</a></p>
 						</div>
 					</div>
+					<a ng-controller="NavCtrl" ng-click="nav('actus')" class="btn btn-info text-center" role="button">Voir plus d'actus</a>
 					<br>
-					<a href="#" class="btn btn-info" role="button">Voir plus d'actus</a>
 
 
 				</div>

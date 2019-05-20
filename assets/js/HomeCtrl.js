@@ -1,11 +1,10 @@
-app.controller('HomeCtrl', ['$scope', '$location','LoginFactory', 'ChangelogFactory',
-	function ($scope, $location, LoginFactory, ChangelogFactory)
+app.controller('HomeCtrl', ['$scope', '$location','LoginFactory', 'ChangelogFactory','ActusFactory',
+	function ($scope, $location, LoginFactory, ChangelogFactory, ActusFactory)
 	{
 
 		$scope.base_url = $location.protocol() + "://" + $location.host()+'/index.php/';
 
 		$scope.loaded = 0;
-
 
 
 			LoginFactory.getInfos().then(function (data) {
@@ -16,6 +15,14 @@ app.controller('HomeCtrl', ['$scope', '$location','LoginFactory', 'ChangelogFact
 			LoginFactory.getResponsableClient().then(function (data) {
 
 				$scope.responsable = data;
+
+				ActusFactory.getActus(2).then(function (data) {
+					$scope.actusHome = data;
+
+				});
+				$scope.readMore = function (id) {
+					location.href = $location.protocol() + "://" + $location.host() + '/index.php/actus/'+id
+				};
 			});
 			ChangelogFactory.getProducts('eseason_resa').then(function (data) {
 				$scope.product = data;

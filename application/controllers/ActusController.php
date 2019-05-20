@@ -36,7 +36,14 @@ class ActusController extends CI_Controller
 
 	public function getArticles()
 	{
-		$result = $this->ActusModel->getArticles();
+		if(isset($_REQUEST['limit']))
+		{
+			$limit = 2;
+		}
+		else {
+			$limit = null;
+		}
+		$result = $this->ActusModel->getArticles($limit);
 			$this->jsonEncode($result);
 	}
 	public final function jsonEncode ($data)

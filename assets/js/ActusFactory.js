@@ -1,8 +1,11 @@
 app.factory('ActusFactory', ['$http', '$location', function ($http, $location) {
 	return {
-		getActus: function () {
+		getActus: function (limit) {
 			return $http({
 				method: 'GET',
+				params: {
+					'limit': limit
+				},
 				url: $location.protocol() + "://" + $location.host() + '/index.php/ActusController/getArticles'
 			}).then(function (x) {
 				return x.data;
