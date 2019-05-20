@@ -15,6 +15,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/hammerjs/2.0.8/hammer.min.js"></script>
 	<link id="theme-style" rel="stylesheet" href="<?php echo base_url() ?>assets/css/home.css">
 	<link id="theme-style" rel="stylesheet" href="<?php echo base_url() ?>assets/css/contrats.css">
+	<link id="theme-style" rel="stylesheet" href="<?php echo base_url() ?>assets/css/login.css">
 	<script src="<?php echo base_url() ?>node_modules/angular/angular.js"></script>
 	<script src="<?php echo base_url() ?>node_modules/angular-sanitize/angular-sanitize.js"></script>
 	<script src="<?php echo base_url() ?>assets/js/app.js"></script>
@@ -22,6 +23,7 @@
 	<script src="<?php echo base_url() ?>assets/js/SupportCtrl.js"></script>
 	<script src="<?php echo base_url() ?>assets/js/HomeCtrl.js"></script>
 	<script src="<?php echo base_url() ?>assets/js/LoginFactory.js"></script>
+	<script src="<?php echo base_url() ?>assets/js/LoginCtrl.js"></script>
 	<script src="<?php echo base_url() ?>assets/js/ChangelogFactory.js"></script>
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
