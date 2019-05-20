@@ -22,6 +22,18 @@ class ActusController extends CI_Controller
 		$this->load->view('actus');
 	}
 
+	public function readArticle($id)
+	{
+		$this->load->view('partial/header');
+		$this->load->view('article');
+	}
+
+	public function getArticle()
+	{
+		$result = $this->ActusModel->getArticle($_REQUEST['id']);
+		$this->jsonEncode($result);
+	}
+
 	public function getArticles()
 	{
 		$result = $this->ActusModel->getArticles();

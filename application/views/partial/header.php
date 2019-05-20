@@ -27,6 +27,7 @@
 	<script src="<?php echo base_url() ?>assets/js/ChangelogFactory.js"></script>
 	<script src="<?php echo base_url() ?>assets/js/ActusCtrl.js"></script>
 	<script src="<?php echo base_url() ?>assets/js/ActusFactory.js"></script>
+	<script src="<?php echo base_url() ?>assets/js/ArticleCtrl.js"></script>
 
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
 		  integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
