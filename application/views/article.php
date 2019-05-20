@@ -4,7 +4,7 @@
 	</div>
 	<br>
 	<h1 class="font-weight-light">{{actus.title}}</h1>
-	<p class="h6"><i class="fas fa-user fa-1x"></i> {{actus.author}} - <i class="far fa-calendar-alt fa-1x"></i> {{actus.publication}}</p>
+	<p class="h6"> <i class="far fa-calendar-alt fa-1x"></i> {{actus.publication}}</p>
 	<br>
 
 
